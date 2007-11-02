@@ -1,6 +1,6 @@
 %define module  Config-Tiny
 %define name    perl-%{module}
-%define version 2.10
+%define version 2.12
 %define release %mkrel 1
 
 Name:       %{name}
