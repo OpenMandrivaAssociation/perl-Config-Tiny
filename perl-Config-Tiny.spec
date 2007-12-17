@@ -15,7 +15,6 @@ Source:     http://www.cpan.org/modules/by-module/Config/%{module}-%{version}.ta
 BuildRequires:  perl-devel
 %endif
 BuildArch:  noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 "Config::Tiny" is a perl class to read and write .ini style
