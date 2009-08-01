@@ -1,21 +1,21 @@
-%define module  Config-Tiny
-%define name    perl-%{module}
-%define version 2.12
-%define release %mkrel 3
+%define upstream_name    Config-Tiny
+%define upstream_version 2.12
 
-Name:       %{name}
-Version:    %{version}
-Release:    %{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Read/Write .ini style files with as little code as possible
-License:    GPL or Artistic
+License:    GPL+ or Artistic
 Group:      Development/Perl
-URL:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Config/%{module}-%{version}.tar.bz2
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:  perl-devel
 %endif
 BuildArch:  noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 "Config::Tiny" is a perl class to read and write .ini style
@@ -33,7 +33,7 @@ not preserve your comments, whitespace, or the order of your config
 file.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 chmod 644 Changes lib/Config/Tiny.pm
@@ -55,5 +55,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/Config
 %{_mandir}/*/*
-
-
