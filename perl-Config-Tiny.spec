@@ -1,5 +1,5 @@
 %define upstream_name    Config-Tiny
-%define upstream_version 2.12
+%define upstream_version 2.13
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:    Read/Write .ini style files with as little code as possible
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
 
 %if %{mdkversion} < 1010
 BuildRequires:  perl-devel
