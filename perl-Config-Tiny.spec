@@ -1,5 +1,5 @@
 %define upstream_name    Config-Tiny
-%define upstream_version 2.13
+%define upstream_version 2.14
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
