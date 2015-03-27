@@ -1,14 +1,14 @@
 %define upstream_name    Config-Tiny
-%define upstream_version 2.20
+%define upstream_version 2.22
 
 Summary:	Read/Write .ini style files with as little code as possible
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Config/Config-Tiny-%{upstream_version}.tgz
+Source0:	http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tgz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 
@@ -32,7 +32,7 @@ file.
 
 %build
 chmod 644 Changes lib/Config/Tiny.pm
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -45,5 +45,3 @@ chmod 644 Changes lib/Config/Tiny.pm
 %doc Changes README
 %{perl_vendorlib}/Config
 %{_mandir}/man3/*
-
-

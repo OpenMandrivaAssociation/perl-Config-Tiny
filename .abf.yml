@@ -1,4 +1,5 @@
 removed_sources:
   Config-Tiny-2.14.tar.gz: c41b3cdff37cdc3204932ae66d7fa98b24d80afe
-sources:
   Config-Tiny-2.20.tgz: b7810698b3ade7d1a7ef3e3ae46d689e38840bbc
+sources:
+  Config-Tiny-2.22.tgz: 111600393c18f314828008d9004ffe8d5a1c4fd7
