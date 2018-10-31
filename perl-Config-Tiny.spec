@@ -4,7 +4,7 @@
 Summary:	Read/Write .ini style files with as little code as possible
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Release:	7
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
